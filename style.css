@@ -1,0 +1,448 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+body {
+    font-family: Raleway;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.wrapper {
+    font-family: Raleway;
+    font-weight: normal;
+    font-size: 16px;
+    max-width: 1090px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 150px;
+    padding-bottom: 1rem;
+    min-height: 300px;
+    background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+    box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.44);
+    border-radius: 3px;
+}
+
+/* Making skewed bg line */
+
+/* .skewed_bg {
+    transform: skew(0deg, -10deg) translateY(-120px);
+}
+
+.header_block_about-me {
+    transform: skew(0deg, 10deg) translateY(-120px);
+} */
+
+/* Skewed line end */
+
+
+.header_block_about-me {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.header_thumb {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid rgb(241, 147, 6);
+}
+.header_about-me_photo {
+    border-radius: 50%;
+}
+.header_about-me_card {
+    background-color: #fff;
+    box-shadow: 1px 4px 11px 3px rgba(0,0,0,0.44);
+    max-width: 375px;
+    margin-left: 1.5rem;
+    margin-top: 10px;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+@media (max-width: 437px) {
+    .header_about-me_card {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+.header_about-me_title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1;
+    line-height: calc(30 / 16 * 100%);
+    padding-bottom: 10px;
+}
+.header_about-me_desc {
+    min-width: 257px;
+}
+
+/* Projects styles start */
+
+.projects {
+    /* padding: 1rem; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin-bottom: 200px;
+    padding: 0 .5rem;
+}
+
+.projects_item {
+    border: 2px solid #000;
+    min-height: 300px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+.projects_item_thumb {
+    background: url('images/qm.png') center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 2px 8px -5px #000000;
+}
+.projects_item_title {
+    font-size: 2.175rem;
+    font-weight: 800;
+    background: #000;
+    color: rgb(39, 168, 6);
+    letter-spacing: 0.114rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.projects_item_desc {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 18px;
+}
+
+.projects_item_thumb_header {
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+}
+
+.projects_item_desc_answer {
+    padding-top: 30px;
+    text-align: center;
+    opacity: 0.045;
+}
+
+.projects_item_desc_answer:hover {
+    opacity: 1;
+    color: rgb(187, 35, 14);
+    font-weight: 700;
+    transition: .2s linear 500ms;
+}
+
+/* Project styles end */
+
+/* Fancy buttons styles start */
+
+.fancy_buttons {
+    padding: 0 1rem;
+}
+
+.fancy_buttons_header {
+    text-align:  center;
+    margin-bottom: 4rem;
+}
+
+.fancy_buttons_container {
+    margin-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.fancy_buttons_title {
+    font-weight: 600;
+    font-size: clamp(1.75rem, 1.45rem + 1.2vw, 3.125rem);
+    padding-bottom: .5em;
+}
+
+.fancy_buttons_title:after {
+    display: block;
+    content: '';
+    width: 15%;
+    height: 2px;
+    background: #000;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+}
+
+.fancy_buttons_desc {
+    font-size: clamp(0.9375rem, 0.8875rem + 0.2vw, 1rem);
+}
+
+
+.fancy_button_simple {
+    padding-block: 1rem;
+    padding-inline: 4.5rem;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    border: 0;
+    font-size: 1.175rem;
+    font-weight: 600;
+    border-radius: .9rem;
+    color: #fff;
+    background-color: #2EF5CB;
+    transition: .315s;
+    
+}
+
+.fancy_button_simple:active{
+    scale: .87;
+    background-color: #2bd6b1;
+}
+
+.fancy_button_circle {
+    border-radius: 50%;
+    font-size: 1.175rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    background-color: rgb(236, 137, 24);
+    border: 0;
+    padding-inline: 2rem;
+    padding-block: 3rem;
+    transition: .3s linear;
+    
+}
+
+.fancy_button_circle:hover {
+    opacity: .7;
+}
+
+.fancy_button_shady {
+    padding-block: 1rem;
+    padding-inline: 5.5rem;
+    font-size: 1.175rem;
+    font-weight: 700;
+    border-radius: 15px;
+    letter-spacing: -0.132px;
+    border: 0;
+    background-color: #f8d800;
+    color: rgb(230, 27, 27);
+    transition: .4s linear;
+}
+
+.fancy_button_shady:hover {
+    background: transparent;
+    letter-spacing: 1.5px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+.fancy_button_point {
+    border: 0;
+    font-weight: 600;
+}
+
+.fancy_button_point {
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    border: 2px solid rgb(122, 121, 121);
+    background-color: pink;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  .fancy_button_point span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .fancy_button_point:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #32b8f7;
+    transition: all .35s;
+  }
+  
+  .fancy_button_point:hover{
+    color: #fff;
+  }
+  
+  .fancy_button_point:hover:after{
+    width: 100%;
+  }
+
+  .fancy_button_purple {
+    width: 13.5rem;
+    height: 4rem;
+    color: #fff;
+    font-size: 1.335rem;
+    font-weight: 700;
+    border: 2px solid #f37995;
+    background-color: #d04df1;
+    transition: .5s linear;
+  }
+
+  .fancy_button_purple:hover {
+      background: transparent;
+      color: #000;
+      border: .5px solid #f6416c;
+  }
+
+  .fancy_button_puke {
+    padding-block: 1.5rem;
+    padding-inline: 2.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #2bd656;
+    font-size: 1.335rem;
+    font-weight: 800;
+    box-shadow: 3px 3px 1px gray;
+    transition: .6s 300ms linear;
+  }
+
+  .fancy_button_puke:hover {
+    transform: rotate(-360deg);
+  }
+
+  .fancy_button_trans {
+    padding-block: 1.5rem;
+    padding-inline: 2.5rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: #0396ff;
+    color: #fff;
+    font-size: 1.435rem;
+    font-weight: 700;
+    letter-spacing: 1.7;
+    
+    transform: translateX(-2%, -2%);
+    box-shadow: 0px 0px 0px gray;
+    
+    transition: .2s ease-in-out;
+  }
+
+  .fancy_button_trans:hover {
+    transform: translateX(2%, 2%);
+    box-shadow: 3px 3px 3px rgb(153, 152, 152);
+  }
+
+  .fancy_button_clamp {
+    padding-block: 1rem;
+    padding-inline: 2.5rem;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #32ccbc;
+    font-size: 1.435rem;
+    font-weight: 400;
+    letter-spacing: 1.7;
+    transition: .3s ease-in-out;
+  }
+
+  .fancy_button_clamp:hover {
+    letter-spacing: 2.5;
+    font-weight: 900;
+    font-size: clamp(1.5rem, 1rem + 1.6vw, 2.5rem);
+    text-shadow: 1px 3px 0 #0f0f0f;
+  }
+
+ /* Ancient styles */
+
+ .ancient {
+     padding: 2rem;
+     margin-bottom: 150px;
+}
+.ancient_cards {
+    
+}
+
+@media (min-width: 600px) {
+    .ancient_card {
+        display: grid;
+        grid-template-columns: minmax(200px, 1fr) 1fr;
+        gap: 1.5rem;
+    }
+}
+.ancient_card {
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    box-shadow: 0px 4px 8px -8px rgba(0,0,0,0.79);
+}
+
+.ancient_card_left-side {
+}
+.ancient_card_thumb {
+}
+.ancient_card_right-side {
+    align-self: center;
+}
+.ancient_card_title {
+    letter-spacing: 4.5px;
+    font-size: clamp(1.5rem, 0.9rem + 2.4vw, 2.25rem);
+    padding-top: .8rem;
+    text-align: center;
+}
+.ancient_card_desc {
+    margin: 1rem 0;
+    line-height: 1.3;
+}
+
+/* Footer */
+
+.footer {
+    padding: 2rem 0;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.footer_header {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.footer_links {
+    margin-top: 1.5em;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_link:hover {
+    opacity: .6;
+}
+
+.footer a {
+    display: block;
+    color: rgb(255, 148, 114);
+}
